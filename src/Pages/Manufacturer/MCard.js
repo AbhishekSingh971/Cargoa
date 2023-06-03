@@ -27,29 +27,22 @@ const MCard = (props) => {
   }, []);
   return (
     <div className="Mcard-main container col-3">
-      <div className="Mcard-card">
-        <img
-          className="Mcard-img"
-          src="https://s.yimg.com/ny/api/res/1.2/6.XmOxp0R5bs.rEpsShmBw--/YXBwaWQ9aGlnaGxhbmRlcjt3PTY0MDtoPTQyNw--/https://media.zenfs.com/en/Benzinga/2ee1581375ca12eb351993ffa9f877f6"
-          alt=""
-        />
-        <div className="card-content">
-          <h3 className="Mcard-h2">To : {props.to}</h3>
-          <br />
-          <h3 className="Mcard-h3">From : {props.from}</h3>
-          <p className="Mcard-p">
-            <span>Quantity : {props.quantity} Tons</span>
-            <br />
-            <span>Transporter : {props.transporter}</span>
-          </p>
-          <div className="Mcard-div row">
-            <div className="col">
-              <button className="btn btn-warning">UPDATE</button>
-            </div>
+      <div class="card" style={{ maxWidth: "20rem" }}>
+        <img src="./images/manufacturer.png" class="card-img-top" alt="..." />
+        <div class="card-body"></div>
+        <h5 class="card-header  text-black">TO : {props.to}</h5>
+        <h5 class="card-header  text-black">FROM : {props.from}</h5>
+        <h5 class="card-header  text-black">Qunatity : {props.quantity}</h5>
+        <h5 class="card-text text-black ps-3 pe-3">Transporter : {props.transporter}</h5>
+        <div className="Mcard-div row p-3">
+          <div className="col">
+            <button className="btn btn-warning">UPDATE</button>
+          </div>
 
-            <div className="col">
-              <button className="btn btn-danger" onClick={props.handleDelete}>DELETE</button>
-            </div>
+          <div className="col">
+            <button className="btn btn-danger" onClick={props.handleDelete}>
+              DELETE
+            </button>
           </div>
         </div>
       </div>

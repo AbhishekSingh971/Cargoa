@@ -108,7 +108,7 @@ const MHome = () => {
                 from={data.from}
                 quantity={data.quantity}
                 transporter={data.transporter}
-                handleDelete={()=>handleDelete(data.id)}
+                handleDelete={()=>handleDelete(data._id)}
               />
             </div>
           );
